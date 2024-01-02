@@ -30,7 +30,7 @@ void playGame(const char *answer) {
 		}
 		calculateAB(answer, guess, &a, &b);
 
-		printf("結果為%dA,%dB", a, b);
+		printf("結果為%dA,%dB\n", a, b);
 		attempts = attempts + 1;
 
 		if (a == 4) {
@@ -38,10 +38,11 @@ void playGame(const char *answer) {
 			displayGameStats(attempts);
 			break;
 		}
-		else if (attempts = max) {
-			printf("你10次都沒猜對,正確答案是%s\n", answer);
-			displayGameStats(attempts);
-			break;
-		}
+
+	}
+
+	if (attempts = max) {
+		printf("你10次都沒猜對,正確答案是%s\n", answer);
+		displayGameStats(attempts);
 	}
 }
